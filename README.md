@@ -1,6 +1,6 @@
-# Rp_Hall_Web
+# Language Education Website configured by Django
 
 
-### The repository for RP hall's Website
+### The repository forDjango app
 
-###### Designed And Maintained by RP Hall Webteam
+###### Designed And Maintained by Live Linguistic Team
