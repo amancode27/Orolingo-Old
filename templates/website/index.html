@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Live Linguistic</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0 ">
+	<meta name="description" content="">
+	<meta name="author" content="">
+    {% if appis %}
+            <script> window.location.hash = '#quote'; </script>
+    {% endif %}
+    {% load static %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="{% static 'website/css/bootstrap-responsive.css' %}" rel="stylesheet">
+	<link href="{% static 'website/css/style.css' %}" rel="stylesheet">
+	<link href="{% static 'website/color/default.css' %}" rel="stylesheet">
+	<link rel="icon" href="{% static 'website/img/livelinguistic.png' %}" type="image/x-icon>
+	
+    <link href="https://fonts.googleapis.com/css?family=Hepta+Slab&display=swap" rel="stylesheet">
+</head>
+<style>
+	::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  background: ghostwhite;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: deeppink;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+</style>
+<body>
+	<!-- navbar -->
+    {# redirecting to a particular part of the home page #}
+
+
+	<div id ="section1"class="navbar-wrapper">
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">
+					<!-- Responsive navbar -->
+
+			       
+					<h1 class="brand brand1" style="font-family: 'Hepta Slab', serif; font-size: 28px;"><a href="{% url 'website' %}">LIVE LINGUISTIC</a></h1>
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</a>
+						<!-- navigation -->
+					<nav class="pull-right nav-collapse collapse">
+						<ul id="menu-main" class="nav">
+
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" title="notice_board" href="#sectionLink1">Home</a></li>
+
+							<li class="dropdown" ><a class="dropdown-toggle" data-toggle="dropdown" title="contact" href="#sectionLink2">Our Vision</a></li>
+                            <li  ><a   style="font-weight:800;" title="Student-Login" href="{% url 'users:login_user' %}">Courses</a></li>
+                            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#sectionLink3">About Us </a>
+                        
+							</li>
+							<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#sectionLink4">Contact  Us</a></li>
+                           
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Header area -->
+	<div id="header-wrapper" class="header-slider">
+		<header  class="clearfix visible-desktop" style="margin-top: 7%">
+			<div class="logo">
+				<img id="logo1" src="{% static 'website/img/livelinguistic.png' %}" alt="" />
+			</div><br>
+			<div class="container">
+				<div class="row">
+					<div class="span12">
+						<div id="main-flexslider" class="flexslider">
+							<ul class="slides">
+								<li>
+									<p class="home-slide-content">
+										<strong>Live</strong> Interactive session
+									</p>
+								</li>
+								<li>
+									<p class="home-slide-content">
+										 <strong>Personalised</strong> teaching Curriculum
+									</p>
+								</li>
+								<li>
+									<p class="home-slide-content">
+										Instant Doubt <strong>Solving</strong>
+									</p>
+								</li>
+							</ul>
+						</div>
+						<!-- end slider -->
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	<!-- spacer section -->
+	<section id ="section2"  class="spacer green">
+		<div class="container">
+			<h4 style="text-align: center;color: aliceblue;font-size: 3.5em;font-weight: bold;">Our Vision</h4>
+			<div class="row">
+				<div class="span12 alignleft flyLeft">
+					<blockquote class="large">
+						We, the team of LiveLinguistic, welcome you here. LiveLinguistic intends to provide you a platform where learning a language gets easier in an effective, efficient manner. We plan to design an online platform for our inquisitive Polyglots to venture into various fields with the help of vivid languages and culture. <cite>Live Linguistc Team</cite>
+					</blockquote>
+				</div>
+			</div>
+			<div class="row">
+				<div class="span12 alignleft flyLeft">
+					<div>
+					
+						<blockquote class="large">
+                           "Language Barrier" is a common convention in the contemporary world, as a result of which a lot of individuals or groups of people speaking different languages face numerous problems. We here at LiveLinguistic aim to eradicate this very notion that language bears division as we believe that to have knowledge of foreign language is like to possess a soul of glitter. <cite>Live Linguistc Team</cite>
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			
+				
+				<!-- <div class="span6 aligncenter flyRight"><br><br>
+					<div class="imgicon"><img class="img_rajendra" src="{% static 'website/img/language.jpg' %}"></div>
+				</div> -->
+		
+		</div>
+	</section>
+
+
+	<!-- end spacer section -->
+	<!-- section: team -->
+	<!-- <section id ="section2" class="section">
+		<div class="container">
+
+			<div class="row">
+				<div class="span4 offset1">
+					<div>
+						<h2 style="color: white; font-family: 'Open Sans',X-LocaleSpecific,sans-serif "><strong>We live with creativity</strong></h2>
+						<p style="color: white; font-family: 'Open Sans',X-LocaleSpecific,sans-serif;color: seashell;font-size: 14px">
+                            <strong>"Language Barrier" is a common convention in the contemporary world, as a result of which a lot of individuals or groups of people speaking different languages face numerous problems. We here at LiveLinguistic aim to eradicate this very notion that language bears division as we believe that to have knowledge of foreign language is like to possess a soul of glitter.</strong></p>
+					</div>
+				</div>
+				<div class="span6">
+					<div class="aligncenter">
+						<img src="{% static 'website/img/icons/creativity.png' %}" alt="" />
+					</div>
+				</div>
+			</div>
+			
+           </div>
+    </section> -->
+
+    <section  id="section3"  class="HC_section">
+          
+            <div class="container"><br>
+                <div class="divider-hall"><strong><h2><span style="font-family: 'Open Sans',X-LocaleSpecific,sans-serif; padding-bottom: 2px;border-bottom: 3px solid;line-height: 2;font-size: 3.5rem; font-weight: 800";>Founding Team</span></h2></strong></div>
+			<div class="row">
+				<div class="span3 offset1 flyIn">
+					<div class="people">
+                        <img class="team-thumb img-circle" src="{% static 'website/img/aditya.jpg' %}" alt="" />
+						<h2 class="teamimg">Aditya Gupta</h2>
+						<p class="teampost">
+							Founder
+						</p>
+					</div>
+				</div>
+				<div class="span flyIn offset1">
+					<div class="people">
+						<img class="team-thumb img-circle" src="{% static 'website/img/Aditi.jpg' %}" alt="" />
+						<h2 class="teamimg">Aditi Yadav </h2>
+						<p class="teampost">
+						   Founder
+						</p>
+					</div>
+				</div>
+				<div class="span3 offset1 flyIn">
+					<div class="people">
+						<img class="team-thumb img-circle" src="{% static 'website/img/Ashwin.jpg' %}" alt="" />
+						<h2 class="teamimg">Ashwin Gupta</h2>
+						<p class="teampost">
+							Founder
+						</p>
+					</div>
+				</div>
+            </div>
+           
+			</div>
+         
+
+        </section>
+
+
+		<!-- /.container -->
+
+	<!-- end section: team -->
+    <!-- begin : Notice Board -->
+
+
+  
+	<!-- section: services -->
+	
+	<!-- spacer section -->
+	<section class="spacer bg3" id="quote">
+		<div class="container">
+			<div class="row">
+				<div class="span12 aligncenter flyLeft">
+					<blockquote class="large">
+						Having said that and keeping our broad vision in mind, the extremely trained faculty at LiveLinguistic wishes to extend their hand of help to interested candidates who are keen to learn languages with our modest and convenient live interactive sessions. We ensure that our simple, focused and pragmatic approach will help people understand the usage of languages like French, Spanish,Sanskrit, German and English in modern day custom as our strategy is to constantly innovate the learning process through dynamic personalised attention based on factors like core competence and instant doubt solving.
+                        <cite>Live Linguistic</cite>
+					</blockquote>
+				</div>
+				<div class="span12 aligncenter flyRight">
+					
+					<!-- <i class="icon-rocket icon-10x"></i> -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- end spacer section -->
+
+
+	<!-- end spacer section -->
+	<!-- section: contact -->
+	<section id="section4" class="section green1">
+		<div class="container">
+			<h4>Get in Touch with the developers</h4>
+		
+			<div class="blankdivider30">
+			</div>
+			<div class="row">
+				<div class="span12">
+					<div class="cform" id="contact-form" >
+						{% if form.is_valid %}
+						<div class="alert alert-success">
+                               <strong>Your message has been sent. Thank you!</strong>
+                        </div>
+                        {% endif %}
+						<form action="" method="post" role="form" class="contactForm">
+							{% csrf_token %}
+                            <div class="row">
+								<div class="span10 offset1">
+									<div class="field your-name form-group">
+                                         {% if form.name.errors %}
+                                            {% for error in form.name.errors %}
+                                            <div class="alert alert-danger">
+                                             <strong>{{ error|escape }}</strong>
+                                            </div>
+                                            {% endfor %}
+                                        {% endif %}
+										<input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+									</div>
+									<div class="field your-email form-group">
+										 {% if form.email.errors %}
+                                            {% for error in form.email.errors %}
+                                            <div class="alert alert-danger">
+                                             <strong>{{ error|escape }}</strong>
+                                            </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+
+
+									</div>
+									<div class="field subject form-group">
+										{% if form.subject.errors %}
+                                            {% for error in form.subject.errors %}
+                                            <div class="alert alert-danger">
+                                             <strong>{{ error|escape }}</strong>
+                                            </div>
+                                            {% endfor %}
+                                        {% endif %}
+                                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+
+									</div>
+								
+										<div class="field message form-group">
+											{% if form.message.errors %}
+												{% for error in form.message.errors %}
+												<div class="alert alert-danger">
+												 <strong>{{ error|escape }}</strong>
+												</div>
+												{% endfor %}
+											{% endif %}
+											<textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+	
+										</div>
+										
+											<input type="submit" value="Send message" class="btn btn-warning pull-left submit12">
+										
+						
+								
+								</div>
+								
+							</div>
+						</form>
+					</div>
+				</div>
+				<!-- ./span12 -->
+			</div>
+
+		</div>
+	</section>
+
+	<footer>
+
+		<div class="container">
+            <div class="row">
+                <div class="span5 offset1 footer_contact">
+                    <p style="font-size: 30px;color: white"><b>Contact : :</b></p>
+
+                    <p style="font-size: 20px;color: #b7290a"><b>Live Linguistic Center</b></p>
+
+                    <p style="font-size: 20px;color: white">Linguistic Campus,<br>Near Main Road<br>NCR<br>Delhi</p>
+
+                </div>
+                <div class="span2 footer_links">
+                    <p style="font-size: 30px;color: white">Quick Links:</p>
+                    <ul>
+                
+					<li><a href="#sectionLink1">Home</a></li> 
+					<li><a href="#sectionLink2">Our Vision</a></li>
+					<li><a href="{% url 'users:login_user' %}">Courses</a></li>
+                    <li><a href="#sectionLink3">About Us</a></li>
+                    <li><a href="#sectionLink4">Contact Us</a></li>
+
+                     
+               
+
+                    </ul>
+                </div>
+                <div class="span3">
+                    <img id="footer_logoiit" src="{% static 'website/img/livelinguistic.png' %}">
+                </div>
+            </div>
+			<div class="row">
+				<div class="span6 offset3">
+					<ul class="social-networks">
+						<li><a href="#"><i class="icon-circled icon-bgdark icon-instagram icon-2x"></i></a></li>
+						<li><a href="#"><i class="icon-circled icon-bgdark icon-twitter icon-2x"></i></a></li>
+						<li><a href="#"><i class="icon-circled icon-bgdark icon-facebook icon-2x"></i></a></li>
+						<li><a href="mailto:livelinguistic@gmail.com"><i class="icon-circled icon-bgdark icon-envelope icon-2x"></i></a></li>
+
+					</ul>
+
+						<div class="credits">
+							Designed with <i class="fa fa-heart" style="color:red"></i> Live Linguistic Team
+						</div>
+
+				</div>
+            </div>
+		</div>
+
+		<!-- ./container -->
+
+	</footer>
+	<a href="#" class="scrollup"><i class="icon-angle-up icon-square icon-bgdark icon-2x"></i></a>
+	<script src="{% static 'website/js/jquery.js' %}"></script>
+	<script src="{% static 'website/js/jquery.scrollTo.js' %}"></script>
+	<script src="{% static 'website/js/jquery.nav.js' %}"></script>
+	<script src="{% static 'website/js/jquery.localScroll.js' %}"></script>
+	<script src="{% static 'website/js/bootstrap.js' %}"></script>
+	<script src="{% static 'website/js/jquery.prettyPhoto.js' %}"></script>
+	<script src="{% static 'website/js/isotope.js' %}"></script>
+	<script src="{% static 'website/js/jquery.flexslider.js' %}"></script>
+	<script src="{% static 'website/js/inview.js' %}"></script>
+	<script src="{% static 'website/js/animate.js' %}"></script>
+	<script src="{% static 'website/js/custom.js' %}"></script>
+	<!--<script src="{% comment %}{% static 'website/contactform/contactform.js' %}{% endcomment %}"></script> -->
+
+</body>
+
+
+<script>
+	   document.addEventListener("DOMContentLoaded", () => {
+      //  little hack to detect if the user is on ie 11
+      const isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+      // get all the links with an ID that starts with 'sectionLink'
+      const listOfLinks = document.querySelectorAll("a[href^='#sectionLink");
+      // loop over all the links
+      listOfLinks.forEach(function (link) {
+        // listen for a click
+        link.addEventListener('click',  () => {
+          // toggle highlight on and off when we click a link
+          listOfLinks.forEach( (link) => {
+            if (link.classList.contains('highlighted')) {
+              link.classList.remove('highlighted');
+            }
+          });
+          link.classList.add('highlighted');
+          // get the element where to scroll
+          let ref = link.href.split('#sectionLink');
+          ref = "#section" + ref[1];
+          // ie 11 does not support smooth scroll, so we will simply scroll
+          if (isIE11) {
+            window.scrollTo(0, document.querySelector(ref).offsetTop);
+          } else {
+            window.scroll({
+              behavior: 'smooth',
+              left: 0,
+              // top gets the distance from the top of the page of our target element
+              top: document.querySelector(ref).offsetTop
+            });
+          }
+        })
+      })
+    })
+</script>
+</html>

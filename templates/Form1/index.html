@@ -1,0 +1,98 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Personal Details</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link rel="shortcut icon" href="{% static 'website/img/logo_hall.png' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'users/css/main.css' %}">
+<!--===============================================================================================-->
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 4 DatePicker</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+	<div class="container-contact100" style="background-image: url('{% static 'users/images/bg-01.jpg' %}');">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="post" action="{% url 'users:create_profile' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+				<span class="contact100-form-title">
+					 Personal  Details
+ 				</span>
+
+                {% if error %}
+                     <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endif %}
+
+				<div class="wrap-input100">
+                    <span class="label-input100 ">Name</span>
+					<input class="input100" type="text" name="name" value="{{ First_Name }}" disabled>
+				</div>
+
+
+				<div class="wrap-input100">
+					<span class="label-input100">Roll No</span>
+                    <input class="input100" type="text" name="username" value="{{ user_name }}" disabled>
+
+				</div>
+                	<div class="wrap-input100">
+					<span class="label-input100">Hobbies</span>
+					<input  class="input100" type="text" name="dob" placeholder="Example: Playing Cricket, Singing etc">
+
+				</div>
+                	<div class="wrap-input100">
+					<span class="label-input100">Room No (Example: C-218)</span>
+					<input class="input100" type="text" name="room_no" placeholder="Example: C-218">
+				</div>
+                	<div class="wrap-input100">
+					<span class="label-input100">Contact No. without +91</span>
+					<input class="input100" type="text" name="contact_no" placeholder="Contact No. without +91">
+				</div>
+                	<div class="wrap-input100">
+					<span class="label-input100">Department</span>
+					<input class="input100" type="text" name="dept" value="{{ dep_slice }}" disabled>
+
+				</div>
+                <div class="wrap-input100">
+					<span class="label-input100">Image: Size must be less than 100kb</span>
+					<input class="input100" type="file" name="image" placeholder="Your Image must be below 100KB and updated">
+				</div>
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button type="submit" class="contact100-form-btn">
+							Submit
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div id="dropDownSelect1"></div>
+</body>
+</html>

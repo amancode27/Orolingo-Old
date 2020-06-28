@@ -1,0 +1,128 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Register Here</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="shortcut icon" href="{% static 'website/img/livelinguistic.png' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'users/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100" style="background-color: #fbb034;
+	background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);">
+		<div class="wrap-contact100">
+			<form method="post">
+				{% csrf_token %}
+				{% if errors %}
+
+				<div class="alert alert-danger">
+					<strong>{{ errors|escape }}</strong>
+				</div>
+
+				
+				{% endif %}
+
+				<span class="contact100-form-title">
+					Enter the Username and Password to Register.
+				</span>
+			{% for field in form %}
+			<div class="wrap-input100">
+				<span class="label-input100"> {{ field.label_tag }}</span>
+				
+				<!-- <input class="input100" type="text" name="{{ field.help_text }}"  placeholder="{{ field.help_text }} "> -->
+				{{ field }}
+			</div>
+	
+			  {% if field.help_text %}
+				<small style="color: grey">{{ field.help_text }}</small>
+			  {% endif %}
+			  {% for error in field.errors %}
+				<p style="color: red">{{ error }}</p>
+			  {% endfor %}
+			
+		  {% endfor %}
+		  <div class="container-contact100-form-btn">
+			<div class="wrap-contact100-form-btn">
+				<div class="contact100-form-bgbtn"></div>
+				<button class="contact100-form-btn" type="submit">
+					Submit
+				</button>
+			</div>
+		</div>
+		</form>
+			<!-- <form class="contact100-form validate-form" method="post">
+                {% csrf_token %}
+				<span class="contact100-form-title">
+					Enter your Username to continue the registration
+				</span>
+                {% if error %}
+                     <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endif %}
+
+				<div class="wrap-input100">
+					<span class="label-input100">Your Username</span>
+					<input class="input100" type="text" name="username1" placeholder="username">
+				</div>
+
+				<div class="wrap-input100">
+					<span class="label-input100 ">Create Password</span>
+					<input class="input100" type="password" name="password1" placeholder="New Password">
+                    <span class="label-input50 " style="color: red;">*Your password can't be too similar to your other personal information.</span><BR>
+                    <span class="label-input50 " style="color: red;">*Your password must contain at least 8 characters.</span><BR>
+                    <span class="label-input50 " style="color: red;">*Your password can't be a commonly used password.</span><BR>
+                    <span class="label-input50 " style="color: red;">*Your password can't be entirely numeric.</span><BR>
+				</div>
+
+
+				<div class="wrap-input100">
+					<span class="label-input100">Confirm Password</span>
+					<input class="input100" type="password" name="password2" placeholder="Confirm Password">
+				</div>
+
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn" type="submit">
+							Submit
+						</button>
+					</div>
+				</div><BR>
+			</form><BR> -->
+        <span class="label-input50 "  >*If you have any problem in log in please mail us at <a href="mailto:livelinguistic@gmail.com" style="color: blue; text-decoration: underline">livelinguistic@gmail.com</a></span><BR>
+		</div>
+
+
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+
+
+
+
+</body>
+</html>

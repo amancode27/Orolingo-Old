@@ -1,0 +1,79 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login-RP Hall IITKGP</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="shortcut icon" href="{% static 'website/img/livelinguistic.png' %}">
+    <!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/fonts/Linearicons-Free-v1.0.0/icon-font.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/css-hamburgers/hamburgers.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'users/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'users/css/main.css' %}">
+<!--===============================================================================================-->
+</head>
+<body>
+
+
+	<div class="container-contact100" style="background-color: #fbb034;
+	background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);">
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" method="POST" action="">
+                {% csrf_token %}
+                {% if errors %}
+
+                    <div class="alert alert-danger">
+                        <strong>{{ errors|escape }}</strong>
+                    </div>
+
+                {% endif %}
+				<span class="contact100-form-title">
+					Enter your Username and Password to Login.
+				</span>
+
+
+
+				<div class="wrap-input100">
+					<span class="label-input100">Username</span>
+					<input class="input100" type="text" name="username"  placeholder="Roll No.">
+				</div>
+
+				<div class="wrap-input100">
+					<span class="label-input100 ">Password</span>
+					<input class="input100" type="password" name="password"  placeholder="Password">
+				</div>
+
+
+				<div class="container-contact100-form-btn">
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button class="contact100-form-btn" type="submit">
+							Submit
+						</button>
+					</div>
+				</div>
+			</form><BR><BR>
+            <span class="label-input100 ">New User? <a class="label-input100 " style="color: darkblue; text-decoration: underline" href="{% url 'users:register' %}">Register Here!</a></span>
+		</div>
+
+
+	</div>
+
+
+
+	<div id="dropDownSelect1"></div>
+
+</body>
+</html>
