@@ -5,6 +5,6 @@
 
 #### Live site at http://www.orolingo.herokuapp.com/
 
-###### Designed And Maintained by Live Linguistic Team
+###### Designed And Maintained by Orolingo Team
 
 
