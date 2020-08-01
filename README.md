@@ -3,7 +3,7 @@
 
 ### The repository for Django app
 
-#### Live site at http://www.orolingo.herokuapp.com/
+#### Live site at http://www.orolingo.com/
 
 ###### Designed And Maintained by Orolingo Team
 
